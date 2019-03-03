@@ -15,7 +15,9 @@ class CreateResponsesTable extends Migration
     {
         Schema::create('responses', function (Blueprint $table) {
             $table->mediumIncrements('id');
-            $table->mediumInteger('user_id')->unsinged();
+            $table->mediumInteger('speaker_id')->unsinged();
+            $table->boolean('view_point');
+            $table->mediumInteger('board_id')->unsinged();
             $table->string('comment', 400);
             $table->string('url')->nullable();
             $table->tinyInteger('dice')->unsigned();

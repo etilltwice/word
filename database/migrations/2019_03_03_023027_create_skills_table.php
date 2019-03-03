@@ -15,6 +15,7 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->mediumIncrements('id');
+            $table->mediumInteger('character_id');
             $table->string('name');
             $table->string('profile');
             $table->tinyInteger('proficiency')->unsigned();
