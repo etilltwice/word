@@ -36,4 +36,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // リレーション
+    public function boards()
+    {
+        return hasMany('App\Eloquents\Board', 'author_id', 'id');
+    }
+
+    public function responses()
+    {
+        return hasMany('App\Eloquents\Response', 'speaker_id', 'id');
+    }
+
+    public function characters()
+    {
+        return hasMany('App\Eloquents\Character', 'user_id', 'id');
+    }
+
+    public function images()
+    {
+        return hasMany('App\Eloquents\Image', 'user_id', 'id');
+    }
+
+    public function news()
+    {
+        return hasMany('App\Eloquents\News', 'user_id', 'id');
+    }
 }
