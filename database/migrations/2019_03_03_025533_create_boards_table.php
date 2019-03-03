@@ -16,8 +16,8 @@ class CreateBoardsTable extends Migration
         Schema::create('boards', function (Blueprint $table) {
             $table->mediumIncrements('id');
             $table->mediumInteger('outhor_id')->unsigned;
-            $table->string('caption');
-            $table->string('image_path')->nullable();
+            $table->string('caption', 600);
+            $table->mediumInteger('image_id')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });

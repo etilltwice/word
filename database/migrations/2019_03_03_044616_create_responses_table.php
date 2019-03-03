@@ -16,8 +16,8 @@ class CreateResponsesTable extends Migration
         Schema::create('responses', function (Blueprint $table) {
             $table->mediumIncrements('id');
             $table->mediumInteger('user_id')->unsinged();
-            $table->string('comment');
-            $table->string('url');
+            $table->string('comment', 400);
+            $table->string('url')->nullable();
             $table->tinyInteger('dice')->unsigned();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

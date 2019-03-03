@@ -14,7 +14,7 @@ class CreateSkillsTable extends Migration
     public function up()
     {
         Schema::create('skills', function (Blueprint $table) {
-            $table->mediumInteger('id');
+            $table->mediumIncrements('id');
             $table->string('name');
             $table->string('profile');
             $table->tinyInteger('proficiency')->unsigned();

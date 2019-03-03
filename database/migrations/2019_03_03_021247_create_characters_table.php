@@ -17,9 +17,9 @@ class CreateCharactersTable extends Migration
             $table->mediumIncrements('id')->unsigned();
             $table->mediumInteger('user_id')->unsigned();
             $table->string('name', 30);
-            $table->string('profile')->nullable();
+            $table->string('profile', 200)->nullable();
             $table->tinyInteger('gender')->unsigned();
-            $table->tinyInteger('age')->unsigned();
+            $table->smallInteger('age')->unsigned();
             $table->smallInteger('height')->unsigned();
             $table->smallInteger('weight')->unsigned();
             $table->tinyInteger('size')->unsigned();

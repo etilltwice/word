@@ -14,7 +14,7 @@ class CreateImagesTable extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->mediumInteger('id');
+            $table->mediumIncrements('id');
             $table->string('path', 254);
             $table->mediumInteger('user_id');
             $table->timestamp('created_at')->nullable();
