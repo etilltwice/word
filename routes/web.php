@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/index/{column}/{limit?}', 'SelectController@index');
+
+Route::get('/top', 'SelectController@top');
+
+Route::get('/board/{id}', 'BoardController@index');
+
+Route::get('/test', function () {
+    return view('top');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

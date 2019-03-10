@@ -44,6 +44,7 @@ class WordSeeder extends Seeder
                             'board_id' => $board->id,
                             'view_point' => true,
                         ]);
+
                         factory(App\Eloquents\Response::class, 1)->create([
                             'speaker_id' => $character->id,
                             'board_id' => $board->id,

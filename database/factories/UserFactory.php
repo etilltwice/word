@@ -78,6 +78,7 @@ $factory->define(App\Eloquents\Image::class, function (Faker $faker) {
 // 掲示板ファクトリ
 $factory->define(App\Eloquents\Board::class, function (Faker $faker) {
     return [
+        'title' => $faker->name(),
         'author_id' => $faker->numberBetween($min = 0, $max = 10),
         'view_point' => $faker->boolean(),
         'caption' => $faker->realText($maxNbChars = 600, $indexsize = 2),
