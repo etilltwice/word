@@ -11,21 +11,21 @@ class Character extends Model
     // リレーション
     public function boards()
     {
-        return hasMany('App\Eloquents\Board', 'author_id', 'id');
+        return $this->hasMany('App\Eloquents\Board', 'author_id', 'id');
     }
 
     public function responses()
     {
-        return hasMany('App\Eloquents\Response', 'speaker_id', 'id');
+        return $this->hasMany('App\Eloquents\Response', 'speaker_id', 'id');
     }
 
     public function skills()
     {
-        return hasMany('App\Eloquents\Skill', 'character_id', 'id');
+        return $this->hasMany('App\Eloquents\Skill', 'character_id', 'id');
     }
 
     public function users()
     {
-        return belongsTo('App\User', 'user_id', 'id');
+        return $this->belongsTo('App\User', 'user_id', 'id');
     }
 }

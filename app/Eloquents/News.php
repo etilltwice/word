@@ -11,6 +11,6 @@ class News extends Model
     //  リレーション
     public function users()
     {
-        return belongsTo('App\User', 'user_id', 'id');
+        return $this->belongsTo('App\User', 'user_id', 'id');
     }
 }

@@ -11,16 +11,16 @@ class Response extends Model
     //  リレーション
     public function users()
     {
-        return belongsTo('App\User', 'speaker_id', 'id');
+        return $this->belongsTo('App\User', 'speaker_id', 'id');
     }
 
     public function characters()
     {
-        return belongsTo('App\Eloquents\Character', 'speaker_id', 'id');
+        return $this->belongsTo('App\Eloquents\Character', 'speaker_id', 'id');
     }
 
     public function boards()
     {
-        return belongsTo('App\Eloquents\Board', 'board_id', 'id');
+        return $this->belongsTo('App\Eloquents\Board', 'board_id', 'id');
     }
 }

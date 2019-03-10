@@ -11,6 +11,6 @@ class Skill extends Model
     // リレーション
     public function skills()
     {
-        return belongsTo('App\Eloquents\Skill', 'character_id', 'id');
+        return $this->belongsTo('App\Eloquents\Skill', 'character_id', 'id');
     }
 }
